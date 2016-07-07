@@ -1,0 +1,252 @@
+/* http://blogblocks.org/css/reset/ 
+   v2.4 | 20160107
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 5px;
+  padding: 5px;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body{
+background-color:black;
+}
+#wrapper{
+margin:5px auto;
+width:98%;
+height:auto;
+min-height:600px;
+background-color:#FFFCF0;
+}
+.header{
+text-align:center;
+padding:5px;
+width:98%;
+background-color:lightgray;
+color:#AB143A;
+}
+
+h1{
+font-size:2.5em;
+margin:20px auto;
+text-align:center;
+padding:5px;
+width:98%;
+background-color:lightgray;
+color:#AB143A;
+}
+.header h1{
+font-size:8em;
+margin:20px auto;
+text-align:center;
+padding:5px;
+width:98%;
+background-color:lightgray;
+color:#AB143A;
+
+}
+.header h2{
+font-size:6em;
+margin:20px auto;
+text-align:center;
+padding:5px;
+width:98%;
+background-color:lightgray;
+color:#8F1130;
+
+}
+
+
+
+h2{
+font-size:1.5em;
+margin:20px auto;
+text-align:center;
+padding:5px;
+width:98%;
+background-color:#F6FFE2;
+color:darkgray;
+-webkit-box-shadow: -3px 3px 9px -1px rgba(0,0,0,0.52);
+-moz-box-shadow: -3px 3px 9px -1px rgba(0,0,0,0.52);
+box-shadow: -3px 3px 9px -1px rgba(0,0,0,0.52);
+}
+
+p{
+margin-left:20px;
+margin-right:20px;
+padding:5px;
+
+}
+
+a{
+margin-left:20px;
+margin-right:20px;
+padding:5px;
+}
+.comments{
+font-style:italic;
+color: gray;
+}
+.moinfo{
+margin:10px auto;
+width:98%;
+height:auto;
+font-style:italic;
+color: gray;
+border:2px solid lightgray;
+border-radius: 10px;
+padding:5px;
+
+}
+.terminal{
+margin-left:20px;
+margin-right:20px;
+padding:5px;
+}
+
+
+pre{
+margin-left:20px;
+margin-right:20px;
+padding:5px;
+white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.
+}
+
+/* responsive text queries */
+
+@media screen and (max-width: 992px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 95%;
+  }
+  .header h1 {
+    font-size: 24px;  
+  }
+  .header h2 {
+    font-size: 22px;  
+  }
+  .header h3 {
+    font-size: 18px;  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 90%;
+  }
+  .header h1 {
+    font-size: 20px;  
+  }
+  .header h2 {
+    font-size: 18px;  
+  }
+  .header h3 {
+    font-size: 16px;  
+  }
+}
+@media screen and (max-width: 350px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 80%;
+  }
+  .header h1 {
+    font-size: 22px;  
+  }
+  .header h2 {
+    font-size: 20px;  
+  }
+  .header h3 {
+    font-size: 16px;  
+  }
+}
+@media screen and (max-width: 992px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 95%;
+  }
+  .header h1 {
+    font-size: 24px;  
+  }
+  .header h2 {
+    font-size: 22px;  
+  }
+  .header h3 {
+    font-size: 18px;  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 90%;
+  }
+  .header h1 {
+    font-size: 20px;  
+  }
+  .header h2 {
+    font-size: 18px;  
+  }
+  .header h3 {
+    font-size: 16px;  
+  }
+}
+@media screen and (max-width: 350px) {
+  .header p,.btn,input,div,span,h4 {
+    font-size: 80%;
+  }
+  .header h1 {
+    font-size: 22px;  
+  }
+  .header h2 {
+    font-size: 20px;  
+  }
+  .header h3 {
+    font-size: 16px;  
+  }
+}
+
+
+
+
+
+/* End */

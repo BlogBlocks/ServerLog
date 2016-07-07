@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>jack-install-starter-node-angular</title>
+<meta name="description" content="Memory Assistant to the Installation information, and how to start jack-install-starter-node-angular. ">
+<meta name="Jack" content="Local Computer Install Info for jack-install-starter-node-angular">
+<script src="js/jscolor.min.js"></script>
+<link rel="stylesheet" href="styles.css?v=1.0">
+</head>
+
+<body>
+<div id="wrapper">
+
+<h1 id="demo">Setting Up a NodeJS Server with a Cousel.log in a log.file</h1>
+
+
+
+
+<h2>Setting up Server with logged events in a file not a consel</h2>
+FileName Qserver.js:
+<script>
+ var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(1337, "127.0.0.1");
+console.log('Server running at http://127.0.0.1:1337/');
+//server active ---
+</script>
+var fs = require('fs');
+var access = fs.createWriteStream('/home/jack/Desktop/JavaScript' + '/node.access.log', { flags: 'a' })
+      , error = fs.createWriteStream(dir + '/node.error.log', { flags: 'a' });
+
+// redirect stdout / stderr
+proc.stdout.pipe(access);
+proc.stderr.pipe(error);  
+
+
+ERROR:
+
+My Search:
+SyntaxError: Invalid regular expression flags /home/user/app 
+
+Maybe I need to use quotes ?
+
+
+<pre>
+var http = require("http"),
+    url = require("url"),
+    path = require("path"),
+    fs = require("fs")
+    port = process.argv[2] || 8888;
+
+http.createServer(function(request, response) {
+
+  var uri = url.parse(request.url).pathname
+    , filename = path.join(process.cwd(), uri);
+  
+  path.exists(filename, function(exists) {
+    if(!exists) {
+      response.writeHead(404, {"Content-Type": "text/plain"});
+      response.write("404 Not Found\n");
+      response.end();
+      return;
+    }
+
+    if (fs.statSync(filename).isDirectory()) filename += '/index.html';
+
+    fs.readFile(filename, "binary", function(err, file) {
+      if(err) {        
+        response.writeHead(500, {"Content-Type": "text/plain"});
+        response.write(err + "\n");
+        response.end();
+        return;
+      }
+
+      response.writeHead(200);
+      response.write(file, "binary");
+      response.end();
+    });
+  });
+}).listen(parseInt(port, 10));
+
+console.log("Static file server running at\n  => http://localhost:" + port + "/\nCTRL + C to shutdown");
+</pre>
+
+<h2>Initiating NPM</h2><br />
+jack@jack-desktop:~/Desktop/JavaScript/ServerLog$ npm init 
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+name: (ServerLog) 
+Sorry, name can no longer contain capital letters.
+name: (ServerLog) serverlog
+version: (1.0.0) 
+description: Maintain a Physical NodeConsole.log instead of terminal console.log
+entry point: (Qserver.js) 
+test command: Qtest
+git repository: https://github.com/BlogBlocks/ServerLog.git
+keywords: nodejs server log console.log file
+author: Jack Northrup
+license: (ISC) 
+About to write to /home/jack/Desktop/JavaScript/ServerLog/package.json:
+
+{
+  "name": "serverlog",
+  "version": "1.0.0",
+  "description": "Maintain a Physical NodeConsole.log instead of terminal console.log",
+  "main": "Qserver.js",
+  "scripts": {
+    "test": "Qtest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlogBlocks/ServerLog.git"
+  },
+  "keywords": [
+    "nodejs",
+    "server",
+    "log",
+    "console.log",
+    "file"
+  ],
+  "author": "Jack Northrup",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlogBlocks/ServerLog/issues"
+  },
+  "homepage": "https://github.com/BlogBlocks/ServerLog#readme"
+}
+
+
+Is this ok? (yes) yes
+yes
+</pkg><br />
+<h2>Set up a GIT repository</h2>
+<pre>Quick setup — if you’ve done this kind of thing before
+or  
+ HTTPS
+ SSH
+
+https://github.com/BlogBlocks/ServerLog.git
+
+We recommend every repository include a README, LICENSE, and .gitignore.
+…or create a new repository on the command line
+
+echo "# ServerLog" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/BlogBlocks/ServerLog.git
+git push -u origin master
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/BlogBlocks/ServerLog.git
+git push -u origin master
+</pre>
+
+<h2>Install Hapi.js</h2><br />
+<span class="terminal">jack@jack-desktop:~/Desktop/JavaScript/ServerLog$ npm install hapi --save</span>span><br />
+<pre>
+jack@jack-desktop:~/Desktop/JavaScript/ServerLog$ npm install hapi --save
+serverlog@1.0.0 /home/jack/Desktop/JavaScript/ServerLog
+└─┬ hapi@13.5.0 
+  ├── accept@2.1.1 
+  ├── ammo@2.0.1 
+  ├── boom@3.2.0 
+  ├── call@3.0.2 
+  ├── catbox@7.1.1 
+  ├── catbox-memory@2.0.2 
+  ├── cryptiles@3.0.1 
+  ├── heavy@4.0.1 
+  ├── hoek@4.0.0 
+  ├── iron@4.0.1 
+  ├── items@2.1.0 
+  ├─┬ joi@8.1.0 
+  │ ├── isemail@2.1.2 
+  │ └── moment@2.13.0 
+  ├── kilt@2.0.1 
+  ├─┬ mimos@3.0.1 
+  │ └── mime-db@1.23.0 
+  ├── peekaboo@2.0.1 
+  ├── shot@3.1.0 
+  ├── statehood@4.0.1 
+  ├─┬ subtext@4.0.3 
+  │ ├── content@3.0.1 
+  │ ├─┬ pez@2.1.1 
+  │ │ ├── b64@3.0.1 
+  │ │ └─┬ nigel@2.0.1 
+  │ │   └── vise@2.0.1 
+  │ └── wreck@7.2.1 
+  └── topo@2.0.1 
+</pre>
